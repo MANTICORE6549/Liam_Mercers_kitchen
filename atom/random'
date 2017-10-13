@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="apple-itunes-app" content="app-id=1096148789" />
+	<link rel="alternate" href="https://picarto.tv" hreflang="en" />
+	<title>Fake - Picarto.TV - Creative live streaming service</title>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-45397620-1', 'picarto.tv');
+	  ga('send', 'pageview');
+	  ga('set', 'anonymizeIp', true);
+	</script>
+
+	<script language="javascript" type="text/javascript" src="/js/jquery-2.1.3.min.js"></script>
+
+	<!-- Translation -->
+	<script language="javascript" type="text/javascript" src="/js/translation/i18next-1.11.2.min.js"></script>
+
+	<!-- Global JS -->
+	<script language="javascript" type="text/javascript" src="/js/global.min.js"></script>
+
+	<!-- Menu JS-->
+	<script language="javascript" type="text/javascript" src="/js/menu.min.js"></script>	<!-- Tooltip JS-->
+	<script language="javascript" type="text/javascript" src="/js/tooltip/jquery.qtip.min.js"></script>
+	<script language="javascript" type="text/javascript" src="/js/tooltip/tooltip.js"></script>
+	<link rel="stylesheet" media="screen" href="/js/tooltip/jquery.qtip.min.css">
+
+	<!-- Cookie -->
+	<script src="/js/cookie.min.js"></script>
+
+	<!-- SocialIcons -->
+	<link rel='stylesheet' type='text/css' href='/css/socicon.css' />
+
+	<!-- Bettererer new scroll -->
+	<link rel="stylesheet" href="js/newScroll/perfect-scrollbar.min.css" />
+	<script src="/js/newScroll/perfect-scrollbar.jquery.min.js"></script>
+	<script src="/js/newScroll/scroll.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script language='javascript' type='text/javascript' src='/js/bootstrap/bootstrap.min.js'></script>
+	<link rel='stylesheet' type='text/css' href='/css/bootstrap/bootstrap.min.css' />
+	<link rel='stylesheet' type='text/css' href='/css/bootstrap/radiocheckbox.css' />
+
+	<!-- Special Font -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+	<!-- Icon Style -->
+	<link rel='stylesheet' type='text/css' href='/css/fontawesome/font-awesome.min.css' />
+	<link rel='stylesheet' type='text/css' href='/css/ptv_icons.css' />
+
+	<!-- Animations Style -->
+	<link rel="stylesheet" media="screen" href="/css/animate.min.css">
+
+	<!-- Share Informations -->
+	<meta property="og:image" content="https://picarto.tv/images/socials/socials.jpg" />
+<link rel='stylesheet' media='screen' href='/css/index.min.css'><link rel='stylesheet' type='text/css' href='/css/footer.css' /><link rel='stylesheet' type='text/css' href='/css/index_player.min.css' /><script language='javascript' type='text/javascript' src='/js/isVisible/jquery.visible.min.js'></script><script language='javascript' type='text/javascript' src='/js/index.min.js'></script><script language='javascript' type='text/javascript' src='/js/player.min.js'></script><script src='/js/videojs/plugins/videojs/video.min.js'></script><script src='/js/videojs/plugins/inlinevideo/iphone-inline-video.min.js'></script><script src='/js/videojs/plugins/hls/videojs-contrib-hls.min.js'></script><script src='/js/videojs/plugins/vast/videojs_5.vast.vpaid.min.js'></script><link href='/js/videojs/plugins/vast/videojs.vast.vpaid.min.css' rel='stylesheet'><script language='javascript' type='text/javascript' src='/js/videojs/configuration.min.js'></script><link href='/js/videojs/plugins/videojs/video-js.min.css' rel='stylesheet' type='text/css'><link href='/css/player/videojs_ptv_skin.min.css' rel='stylesheet' type='text/css'><meta name='description' content='We are the world’s leading live streaming platform for creative minds. Come join us and watch artists from all over the world during their creative process!'>			<script>
+			    (function(h,o,t,j,a,r){
+			        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			        h._hjSettings={hjid:250325,hjsv:5};
+			        a=o.getElementsByTagName('head')[0];
+			        r=o.createElement('script');r.async=1;
+			        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			        a.appendChild(r);
+			    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+			</script>
+		<!-- FONT Quicksands -->
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+
+		<!-- Global Styles -->
+		<link rel="stylesheet" media="screen" href="/css/global.min.css">
+		<link rel="stylesheet" media="screen" href="/css/menu.min.css">
+
+</head>
+<body>
+	<div id="menu_error" class="alert alert-danger collapse errorMessage animated fadeInDown" data-backdrop="false" style="display:none;">
+		<button type="button" class="close" aria-hidden="true">&times;</button>
+		<strong>Error:</strong> <span id="menu_error_text">Error</span>
+	</div>
+	<div id="menu_warn" class="alert alert-info collapse errorMessage animated fadeInDown" data-backdrop="false" style="display:none;">
+		<button type="button" class="close" aria-hidden="true">&times;</button>
+		<strong>Info:</strong> <span id="menu_warn_text">Info</span>
+	</div>		<div id='menu_holder'>
+				<nav class="navbar navbar-inverse navbar-fixed-top nav_custom_style colBG2 special_font cutLine0 dark">
+		<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="/" routerlink="/">
+						<img id="menu_logo" title="Picarto.TV" class="menu_logo" alt="Picarto.TV Logo" src="../images/picarto_logo.svg">
+					</a>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse pd5" id="bs-example-navbar-collapse-2">
+					<ul class="nav navbar-nav navbar-left">
+						<span class="menuSpacer posRel">
+							<i style="display: none;" class="fa fa-fw fa-spin fa-spinner searchLoaderIcon"></i>
+							<input type="text" class="form-control searchfield roundPill" id="searchfield" placeholder="Search...">
+						</span>
+						<span class="hidden-xs mg5"></span>
+						<a id="nav_explore_btn" class='navMenuBtn textShadow text-uppercase txWhite noUnderline' href='/communities/explore' data-i18n="menu.explore">EXPLORE</a>
+						<span id="search_results" class="search_results"></span>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+
+						<span class="menuSpacer"><a class="btnBase Green menuRegisterButton text-uppercase" title="Register Picarto.TV" href="/site/register" role="button" data-i18n="menu.signup;[title]menu.signup">Sign up</a></span>
+						<span class="dropdown">
+							<span class="menuSpacer"><a class="dropdown-toggle btnBase White text-uppercase" href="#" role="button" data-toggle="dropdown" data-i18n="menu.login">Login</a>
+							<ul id="login-dp" class="dropdown-menu login-dp colBGW">
+								<li>
+									 <div class="row">
+										<div class="col-md-12">
+											 <form class="form" role="form" accept-charset="UTF-8" id="login-nav">
+													<div class="form-group">
+														 <label class="sr-only" for="username" data-i18n="menu.username">Username</label>
+														 <input type="text" class="form-control roundPill White" id="username" placeholder="Username" data-i18n="[placeholder]menu.username" required>
+													</div>
+													<div class="form-group">
+														 <label class="sr-only" for="password" data-i18n="menu.password">Password</label>
+														 <input type="password" class="form-control roundPill White" id="password" placeholder="Password" data-i18n="[placeholder]menu.password" required>
+													</div>
+													<div class="form-group">
+														<button type="button" id="loginbutton" name="Login" class="btnBase Green btn-block text-uppercase" data-i18n="menu.login">Sign in</button>
+													</div>
+													<div class="text-center top10">
+														<span class="checkbox Green checkbox-circle inlineBlock noMargin txBlack">
+															<input id="keeplogged" class="styled checkbox-success staylogged_norm" type="checkbox">
+															<label for="keeplogged" data-i18n="menu.staysignedin">
+																stay signed-in
+															</label>
+														</span>
+													</div>
+													<div class="help-block text-center"><a href="/site/forgotpw" data-i18n="menu.forgotpassword">Forgot password?</a></div>
+											 </form>
+										</div>
+									 </div>
+								</li>
+							</ul>
+							</span>
+						</span>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+        <script>var show_nsfw_warning = 1</script>
+    		</div>
+		<div id='player_main' class="txWhite">
+					<div class="container-fluid gradientBG overflowHidden special_font posRel">
+			<div class="overflowHidden">
+				<div class="row-eq-height row">
+						<div class="col-md-3 col-xs-12 col-sm-12 hidden-xs hidden-sm zentriert">
+							<div class="streamSwitchContainer text-center pd10">
+								<div class="posRel mg20 playerStreamThumb active" data-loaded="false" data-channel="" data-title="" data-featured="" data-product="" data-offlineimage="">
+									<div class="featuredContainer hidden">
+										<i class="fa fa-certificate ontop featuredMarker cursorPointer fontSize1-5 premiumTextGlow txWW" aria-hidden="true" title="Featured"></i>
+										<i class="fa fa-bookmark ontop featuredMarkerRibbon cursorPointer fontSize1 textShadow txWW" aria-hidden="true"></i>
+									</div>
+									<img class="imageresponsive border2 borderBGW0-3 boxShadow cursorPointer animateAll roundCorners channelThumbnail" src="../images/thumb_loading.gif">
+								</div>
+								<div class="posRel mg20 playerStreamThumb" data-loaded="false" data-channel="" data-title="" data-featured="">
+									<div class="featuredContainer hidden">
+										<i class="fa fa-certificate ontop featuredMarker cursorPointer fontSize1-5 premiumTextGlow txWW" aria-hidden="true" title="Featured"></i>
+										<i class="fa fa-bookmark ontop featuredMarkerRibbon cursorPointer fontSize1 textShadow txWW" aria-hidden="true"></i>
+									</div>
+									<img class="imageresponsive border2 borderBGW0-3 boxShadow cursorPointer animateAll roundCorners channelThumbnail" src="../images/thumb_loading.gif">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-xs-12 col-sm-12">
+							<div id="player_frame" class="">
+								<div id="player_window" class="dynamicDesign border3 borderBGW0-1 boxShadow overflowHidden posRel roundCorners">
+									<div id="player_holder" class="roundCorners overflowHidden">
+                                        					<div class="flexPlayerOuter">
+									<div class="centerFixed playerBackdrop flexPlayerInnerFull">
+				<div class="posRel">
+					<video id="playerHolder1" data-vuid="0" data-channel-id="-1" data-adult="" data-rekid="0" class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9 overflowHidden" playsinline></video>
+					<!-- Hidden Settings Menu -->
+                    <div class="colBGW pd10 roundCorners ontop maininfoFeatureMenu boxShadow zI1 text-left fontSize1 techMenu-" style="display: none;">
+                        <div class="cutLine0 dark bot5 fontSize1-2">Playback options</div>
+                        <div class="pdtop5">
+                            <div class="displayBlock btnBase btn-sm bot5 techBtn tech_switch" data-channel="" data-playerid="1" data-token="public" data-tech="flash">
+                                Flash
+                            </div>
+                                                        <div class="displayBlock btnBase btn-sm bot5 techBtn tech_switch" data-channel="" data-playerid="1" data-token="public" data-tech="mp4">
+                                HTML5 (MP4)
+                            </div>
+                                                        <div class="displayBlock btnBase btn-sm bot5 techBtn tech_switch" data-channel="" data-playerid="1" data-token="public" data-tech="hls">
+                                HTML5 (HLS)
+                            </div>
+                        </div>
+                    </div>
+					<div class="colBGW pd10 roundCorners ontop maininfoFeatureMenu boxShadow zI1 text-left fontSize1 stnMenu- stnMenuContainer" style="display: none;">
+						<div class="cutLine0 dark bot5">Player Options</div>
+						<div class="">
+							<div class="bot5 displayBlock btnBase btn-sm settingsBtn"
+								 onclick="window.open('https://s.surveyplanet.com/H1l3IgFL5Z','_blank');" data-channel=""><i
+									class="fa fa-pencil-square iconContainer"></i> HTML5 Feedback
+							</div>
+						</div>
+												<div class="">
+							<div class="bot5 displayBlock btnBase btn-sm Red settingsBtn reportStream" data-channel="" value="Report"><i
+									class="fa fa-flag iconContainer"></i> Report
+							</div>
+						</div>
+                        						<div class="">
+							<!-- ONLY ON POPOUT -->
+															<div class="bot5 displayBlock btnBase btn-sm settingsBtn popoutStream" data-playerid="1" data-channel="" data-token="public"><i class="fa fa-external-link iconContainer"></i> Popout
+								</div>
+														<!-- ONLY ON POPOUT END -->
+							<!-- ONLY ON MULTISTREAMS -->
+														<!--ONLY ON MULTISTREAMS END -->
+						</div>
+					</div>
+					<!-- Hidden Settings Menu ENDE -->
+				</div>
+			</div>
+			<!-- PLACE STREAM -->
+			<!-- placeStream(channel, playerID, product, offlineImage, online, token, tech, viewer, indexPlayer) -->
+                    					</div>
+														</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-xs-12 col-sm-12 hidden-xs hidden-sm zentriert">
+							<div class="streamSwitchContainer text-center pd10">
+								<div class="posRel mg20 playerStreamThumb" data-loaded="false" data-channel="" data-title="" data-featured="">
+									<div class="featuredContainer hidden">
+										<i class="fa fa-certificate ontop featuredMarker cursorPointer fontSize1-5 premiumTextGlow txWW" aria-hidden="true" title="Featured"></i>
+										<i class="fa fa-bookmark ontop featuredMarkerRibbon cursorPointer fontSize1 textShadow txWW" aria-hidden="true"></i>
+									</div>
+									<img class="imageresponsive border2 borderBGW0-3 boxShadow cursorPointer animateAll roundCorners channelThumbnail" src="../images/thumb_loading.gif">
+								</div>
+								<div class="posRel mg20 playerStreamThumb" data-loaded="false" data-channel="" data-title="" data-featured="">
+									<div class="featuredContainer hidden">
+										<i class="fa fa-certificate ontop featuredMarker cursorPointer fontSize1-5 premiumTextGlow txWW" aria-hidden="true" title="Featured"></i>
+										<i class="fa fa-bookmark ontop featuredMarkerRibbon cursorPointer fontSize1 textShadow txWW" aria-hidden="true"></i>
+									</div>
+									<img class="imageresponsive border2 borderBGW0-3 boxShadow cursorPointer animateAll roundCorners channelThumbnail" src="../images/thumb_loading.gif">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+				</div>
+		<div class="container-fluid bannerTopBG pd0 gradientBG bottomShadow">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 ">
+						<div class="bot20 text-center txWhite">
+							<div class="inlineBlock mg10 indexCatWidth randomCommunities" data-loaded="false">
+								<a href="" class="communityLink"><span class="roundCircle colBG1 inlineBlock indexCategoryFloats border2 borderBGW0-2 animateAll communityImage"><p class="saving top10 fontSize1-5 txWhite"><span>.</span><span>.</span><span>.</span></p></span></a><br>
+								<div class="special_font textShadow top10 communityName fW-500">&nbsp;</div>
+							</div>
+							<div class="inlineBlock mg10 indexCatWidth randomCommunities" data-loaded="false">
+								<a href="" class="communityLink"><span class="roundCircle colBG1 inlineBlock indexCategoryFloats border2 borderBGW0-2 animateAll communityImage"><p class="saving top10 fontSize1-5 txWhite"><span>.</span><span>.</span><span>.</span></p></span></a><br>
+								<div class="special_font textShadow top10 communityName fW-500">&nbsp;</div>
+							</div>
+							<div class="inlineBlock mg10 indexCatWidth randomCommunities" data-loaded="false">
+								<a href="" class="communityLink"><span class="roundCircle colBG1 inlineBlock indexCategoryFloats border2 borderBGW0-2 animateAll communityImage"><p class="saving top10 fontSize1-5 txWhite"><span>.</span><span>.</span><span>.</span></p></span></a><br>
+								<div class="special_font textShadow top10 communityName fW-500">&nbsp;</div>
+							</div>
+							<div class="inlineBlock mg10 indexCatWidth randomCommunities" data-loaded="false">
+								<a href="" class="communityLink"><span class="roundCircle colBG1 inlineBlock indexCategoryFloats border2 borderBGW0-2 animateAll communityImage"><p class="saving top10 fontSize1-5 txWhite"><span>.</span><span>.</span><span>.</span></p></span></a><br>
+								<div class="special_font textShadow top10 communityName fW-500">&nbsp;</div>
+							</div>
+							<div class="inlineBlock mg10 indexCatWidth randomCommunities" data-loaded="false">
+								<a href="/communities/explore" class="communityLink"><i class="fontSize5 fa fa-plus-circle leftright10 txWhite roundCircle indexCategoryFloats animateAll" aria-hidden="true"></i></a><br>
+								<div class="special_font textShadow top10 fW-500">Explore More</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid pdtopbot50 special_font colBG2">
+			<div class="container ">
+				<div class="row text-center">
+					<div class="col-xs-12 special_font">
+						<div class="bot50 text-center">
+							<span class="text-center inlineBlock indexFeatureBlock">
+								<div class="fontSize5 txGreen textShadowDark"><i class="fa fa-pencil"></i></div>
+								<div class="fontSize2 txWhite">Any type of Creativity</div>
+								<div class="fontSize1 text-muted">Whether you are a cosplayer or draw with pen and paper – every creative task is welcome</div>
+							</span>
+							<span class="text-center inlineBlock indexFeatureBlock">
+								<div class="fontSize5 txGreen textShadowDark">
+									<i class="fa fa-ptv-live"></i>
+								</div>
+								<div class="fontSize2 txWhite">Free Streaming</div>
+								<div class="fontSize1 text-muted">We offer you completely free streaming for every registered member</div>
+							</span>
+							<span class="text-center inlineBlock indexFeatureBlock">
+								<div class="fontSize5 txGreen textShadowDark"><i class="fa fa-comments"></i></div>
+								<div class="fontSize2 txWhite">Stay in Contact</div>
+								<div class="fontSize1 text-muted">Chat, follow and stay in contact with creatives from all around the world</div>
+							</span>
+						</div>
+						<div class="text-center fontSize1-2">
+                            <span data-i18n="index.description">We are the world’s leading live streaming platform for creative minds. Join myriads of artists and learn more about us</span>&nbsp;<a target="_blank" href="/site/presentation" data-i18n="index.description_link">here</a>.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid colBG1 pdtopbot20 bordertopbot1 borderBGW0-1">
+			<div class="container ">
+				<div class="row">
+					<!--
+					<div class="col-xs-12">
+						<div class="fontSize2 topbot20 textShadow special_font txWhite">
+                            <span data-i18n="index.eventheader">Upcoming Events</span><a title="Click to learn more about our event system" data-i18n="[title]index.eventinfo" target="_blank" href="/landing-pages/new-event-system"><i class="fontSize0-7 fa fa-fw fa-info-circle"></i></a> <small class="left10 fontSize0-6 text-muted" data-i18n="index.event_subheader">Hurry and get your ticket</small>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 fontSize1-2 topbot20 textShadow special_font txWhite text-center" id="eventLoading" data-i18n="index.event_loading">Loading events...</div>
+						</div>
+
+						<div class="row" id="allEvents" style="display:none;">
+
+							<div class='col-xs-6 col-md-3 exploreEventFrameHolder upcomingEvents' data-loaded='false'>
+								<div class='exploreEventFrame'>
+									<a href='' class='unStyled eventLink'>
+										<div class='posRel exploreEventImage overflowHidden border3 eventOptions'>
+											<img class='imageresponsive preloadImgContainer eventPoster' src='' />
+											<div class="ontop indexEventHover fontSize0-9 txWhite eventShortDescription" style="display: none;"></div>
+										</div>
+									</a>
+									<div class='top10 text-left'>
+										<a href='' class='unStyled eventLink'>
+											<div class='noMargin fontSize1-2 pdbot5 txWhite eventTitle'></div>
+										</a>
+										<div class='top5 noMargin text-muted fontSize0-9'>
+											<div class='inlineBlock eventType' data-eventtype='type' data-eventtypeid='type_id'>
+												<em></em>
+											</div>
+											<span class="text-muted" data-i18n="index.event_in">in</span>
+											<a href="/communities/explore/" class='inlineBlock eventCommunity' data-community='community' data-communityid='community_id'>
+												<em></em>
+											</a>
+										</div>
+										<div class='noMargin text-muted ellipsis fontSize0-9'><span data-i18n="index.event_by">By:</span>&nbsp;<a href="" class="channelName"></a></div>
+										<div class="text-muted fontSize0-9" data-i18n="index.event_starts_at">Starts at:<span class="left5 timeLeft"></span></div>
+										<div class="top5 eventPrice txWhite fontSize1-2 bot50">
+											<strong class="txWhite">
+												<div>
+													<span class="ticketLeft"></span>
+													<i class="fa fa-fw fa-ticket right5" aria-hidden="true"></i>
+												</div>
+											</strong>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class='col-xs-6 col-md-3 exploreEventFrameHolder upcomingEvents' data-loaded='false'>
+								<div class='exploreEventFrame'>
+									<a href='' class='unStyled eventLink'>
+										<div class='posRel exploreEventImage overflowHidden border3 eventOptions'>
+											<img class='imageresponsive preloadImgContainer eventPoster' src='' />
+											<div class="ontop indexEventHover fontSize0-9 txWhite eventShortDescription" style="display: none;"></div>
+										</div>
+									</a>
+									<div class='top10 text-left'>
+										<a href='' class='unStyled eventLink'>
+											<div class='noMargin fontSize1-2 pdbot5 txWhite eventTitle'></div>
+										</a>
+										<div class='top5 noMargin text-muted fontSize0-9'>
+											<div class='inlineBlock eventType' data-eventtype='type' data-eventtypeid='type_id'>
+												<em></em>
+											</div>
+											<span class="text-muted" data-i18n="index.event_in">in</span>
+											<a href="/communities/explore/" class='inlineBlock eventCommunity' data-community='community' data-communityid='community_id'>
+												<em></em>
+											</a>
+										</div>
+                                        <div class='noMargin text-muted ellipsis fontSize0-9'><span data-i18n="index.event_by">By:</span>&nbsp;<a href="" class="channelName"></a></div>
+										<div class="text-muted fontSize0-9" data-i18n="index.event_starts_at">Starts at:<span class="left5 timeLeft"></span></div>
+										<div class="top5 eventPrice txWhite fontSize1-2 bot50">
+											<strong class="txWhite">
+												<div>
+													<span class="ticketLeft"></span>
+													<i class="fa fa-fw fa-ticket right5" aria-hidden="true"></i>
+												</div>
+											</strong>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class='col-xs-6 col-md-3 exploreEventFrameHolder upcomingEvents' data-loaded='false'>
+								<div class='exploreEventFrame'>
+									<a href='' class='unStyled eventLink'>
+										<div class='posRel exploreEventImage overflowHidden border3 eventOptions'>
+											<img class='imageresponsive preloadImgContainer eventPoster' src='' />
+											<div class="ontop indexEventHover fontSize0-9 txWhite eventShortDescription" style="display: none;"></div>
+										</div>
+									</a>
+									<div class='top10 text-left'>
+										<a href='' class='unStyled eventLink'>
+											<div class='noMargin fontSize1-2 pdbot5 txWhite eventTitle'></div>
+										</a>
+										<div class='top5 noMargin text-muted fontSize0-9'>
+											<div class='inlineBlock eventType' data-eventtype='type' data-eventtypeid='type_id'>
+												<em></em>
+											</div>
+											<span class="text-muted" data-i18n="index.event_in">in</span>
+											<a href="/communities/explore/" class='inlineBlock eventCommunity' data-community='community' data-communityid='community_id'>
+												<em></em>
+											</a>
+										</div>
+										<div class='noMargin text-muted ellipsis fontSize0-9'><span data-i18n="index.event_by">By:</span>&nbsp;<a href="" class="channelName"></a></div>
+										<div class="text-muted fontSize0-9" data-i18n="index.event_starts_at">Starts at:<span class="left5 timeLeft"></span></div>
+										<div class="top5 eventPrice txWhite fontSize1-2 bot50">
+											<strong class="txWhite">
+												<div>
+													<span class="ticketLeft"></span>
+													<i class="fa fa-fw fa-ticket right5" aria-hidden="true"></i>
+												</div>
+											</strong>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class='col-xs-6 col-md-3 exploreEventFrameHolder upcomingEvents' data-loaded='false'>
+								<div class='exploreEventFrame'>
+									<a href='' class='unStyled eventLink'>
+										<div class='posRel exploreEventImage overflowHidden border3 eventOptions'>
+											<img class='imageresponsive preloadImgContainer eventPoster' src='' />
+											<div class="ontop indexEventHover fontSize0-9 txWhite eventShortDescription" style="display: none;"></div>
+										</div>
+									</a>
+									<div class='top10 text-left'>
+										<a href='' class='unStyled eventLink'>
+											<div class='noMargin fontSize1-2 pdbot5 txWhite eventTitle'></div>
+										</a>
+										<div class='top5 noMargin text-muted fontSize0-9'>
+											<div class='inlineBlock eventType' data-eventtype='type' data-eventtypeid='type_id'>
+												<em></em>
+											</div>
+											<span class="text-muted" data-i18n="index.event_in">in</span>
+											<a href="/communities/explore/" class='inlineBlock eventCommunity' data-community='community' data-communityid='community_id'>
+												<em></em>
+											</a>
+										</div>
+										<div class='noMargin text-muted ellipsis fontSize0-9'><span data-i18n="index.event_by">By:</span>&nbsp;<a href="" class="channelName"></a></div>
+										<div class="text-muted fontSize0-9" data-i18n="index.event_starts_at">Starts at:<span class="left5 timeLeft"></span></div>
+										<div class="top5 eventPrice txWhite fontSize1-2 bot50">
+											<strong class="txWhite">
+												<div>
+													<span class="ticketLeft"></span>
+													<i class="fa fa-fw fa-ticket right5" aria-hidden="true"></i>
+												</div>
+											</strong>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="text-right topbot10" id="showAllEvents" style="display:none;"><a href="/communities/explore/events" class="txWhite fontSize1-5 viewMoreStremas" data-i18n="index.event_explore">Explore all Events <i class="left10 fa fa-arrow-right" aria-hidden="true"></i></a></div>
+					</div>
+					-->
+
+					<div class="col-xs-12">
+                        <h2 class="fontSize2 topbot20 textShadow special_font txWhite"><span data-i18n="index.top_streams">Top Streams</span>&nbsp;<small class="left10 fontSize0-6 text-muted" data-i18n="index.top_streams_subheader">Streams with high popularity</small></h2>
+						<div class="row">
+							<div class="col-xs-6 col-md-3 topStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 topStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 topStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 topStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 topStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 topStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 topStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 topStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+						</div>
+                        <div class="text-right topbot10"><a href="/communities/explore" class="txWhite fontSize1-5 viewMoreStremas"><span data-i18n="index.top_streams_explore">Explore Top Streams</span>&nbsp;<i class="left10 fa fa-arrow-right" aria-hidden="true"></i></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid pdtopbot50 insetShadow special_font gradientBG">
+			<div class="container ">
+				<div class="row text-center">
+					<div class="col-xs-12">
+						<h3 class="top30 bot10 fontSize2-2 txWhite" data-i18n="index.socials_header">Visit our official socials!</h3>
+						<div class="bot30 row">
+							<a oldtitle="Picarto.TV Tumblr" onclick="ga('send', 'event', 'Tumblr Link', 'Action label', 'Action Value');" class="indexSocialLinks unStyled cursorPointer" href="http://picartotv.tumblr.com/" target="_blank"><span class="pd10 roundPill mg5 indexSocialIcons border2 borderBGW0-1 inlineBlock posRel"><i class="fa fa-fw fa-tumblr verticalMiddle"></i> Tumblr</span></a>
+							<a oldtitle="Picarto.TV Twitter" onclick="ga('send', 'event', 'Twitter Link', 'Action label', 'Action Value');" class="indexSocialLinks unStyled cursorPointer" href="https://twitter.com/picartotv" target="_blank"><span class="pd10 roundPill mg5 indexSocialIcons border2 borderBGW0-1 inlineBlock posRel"><i class="fa fa-fw fa-twitter verticalMiddle"></i> Twitter</span></a>
+							<a oldtitle="Picarto.TV Facebook" onclick="ga('send', 'event', 'Facebook Link', 'Action label', 'Action Value');" class="indexSocialLinks unStyled cursorPointer" href="https://www.facebook.com/picartotv" target="_blank"><span class="pd10 roundPill mg5 indexSocialIcons border2 borderBGW0-1 inlineBlock posRel"><i class="fa fa-fw fa-facebook verticalMiddle"></i> Facebook</span></a>
+							<a oldtitle="Picarto.TV Youtube" onclick="ga('send', 'event', 'Youtube Link', 'Action label', 'Action Value');" class="indexSocialLinks unStyled cursorPointer" href="https://www.youtube.com/c/PicartoTVOfficial" target="_blank"><span class="pd10 roundPill mg5 indexSocialIcons border2 borderBGW0-1 inlineBlock posRel"><i class="fa fa-fw fa-youtube-play verticalMiddle"></i> Youtube</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid colBG1 pdbot50 bordertopbot1 borderBGW0-1">
+			<div class="container ">
+				<div class="row">
+					<div class="col-xs-12 ">
+                        <h2 class="fontSize2 topbot20 textShadow special_font txWhite"><span data-i18n="index.random_header">Random Streams</span>&nbsp;<small class="left10 fontSize0-6 text-muted" data-i18n="index.random_subheader">Streams that might interest you</small></h2>
+						<div class="row">
+							<div class="col-xs-6 col-md-3 randomStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 randomStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 randomStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 randomStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 randomStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 randomStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 randomStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+							<div class="col-xs-6 col-md-3 randomStreams" data-loaded="false">
+								<a href="" class="topbot20 unStyled channelLink">
+									<div class="cursorPointer productType roundCorners">
+										<img class="imageresponsive ZoomImage channelThumbnail" src="../images/thumb_loading.gif">
+									</div>
+									<div class="fontSize1-2 txWhite top10 ellipsis channelName">&nbsp;</div>
+									<div class="fontSize0-9 text-muted ellipsis channelTitle">&nbsp;</div>
+								</a>
+								<a href="" class="communityLink inlineBlock bot50">
+									<span class="fontSize0-9 ellipsis inlineBlock txGreen channelCommunity">&nbsp;</span>
+								</a>
+							</div>
+						</div>
+                        <div class="text-right topbot10"><a href="/communities/explore" class="txWhite fontSize1-5 viewMoreStremas"><span data-i18n="index.random_explore">Explore More Streams</span>&nbsp;<i class="left10 fa fa-arrow-right" aria-hidden="true"></i></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid overflowHidden insetShadow gradientBG" style="padding-top: 30px;">
+			<div class="container mobileAppContainer">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-lg-5 text-center-xs txWhite special_font">
+						<h3 class="textShadow fontBold" data-i18n="index.app_header">Get our FREE Mobile APP!</h3>
+						<p class="textShadow" data-i18n="index.app_subheader">Our free mobile app has been released. Go get it and watch your favorite artists on the go.</p>
+						<div class="text-left inlineBlock">
+                            <div class="topbot10 posRel fontSize1-2 textShadow"><i class="fa fa-check"></i> <span data-i18n="index.app_perk1">Watch your favorite artists</span></div>
+                            <div class="topbot10 posRel fontSize1-2 textShadow"><i class="fa fa-check"></i> <span data-i18n="index.app_perk2">Chat with your friends</span></div>
+                            <div class="topbot10 posRel fontSize1-2 textShadow"><i class="fa fa-check"></i> <span data-i18n="index.app_perk3">Optimized streaming for mobile devices</span></div>
+						</div>
+						<div class="text-center topbot20">
+							<a class="unStyled" href="https://play.google.com/store/apps/details?id=de.x3logic.picarto&hl=de" target="_blank"><img class="inlineBlock mg5 indexAppIcons" src="../images/mobile/getOnGoogle.png"></a>
+							<a class="unStyled" href="https://itunes.apple.com/de/app/picarto.tv/id1096148789?mt=8" target="_blank"><img class="inlineBlock mg5 indexAppIcons" src="../images/mobile/getOnIOS.png"></a>
+						</div>
+					</div>
+					<div class="col-xs-12 hidden-xs hidden-sm hidden-md col-md-6 col-md-push-1" style="min-height: 358px;">
+						<img alt="Picarto.TV MiMi mobile app" style="display: none;" class="mobileAppImage imageresponsive" src="../images/index/index_mobile_app_picarto.TV.png">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid pdtopbot50 colBG1 overflowHidden bordertopbot1 borderBGW0-1">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h4 class="fontSize2 bot20" data-i18n="index.partner">Our Partners</h4>
+					<div>
+						<a href="http://epiccon.de/" target="_blank"><img alt="Logo Epiccon" class="leftright10" style="max-width: 80px;max-height: 80px;" src="../images/partner/epiccon.png"></a>
+						<a href="https://www.furaffinity.net/" target="_blank"><img alt="Logo Furaffinity" class="leftright10" style="max-width: 80px;max-height: 80px;" src="../images/partner/furaffinity.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+<link rel='stylesheet' type='text/css' href='../css/footer.css' />	<div id="footer_frame" class="colBG1 special_font text-center">
+		<div id="footer_sc" class="bot10">
+			<span class="footer_sc_icons leftright10">
+				<a href="https://www.facebook.com/picartotv/" class="noDecoration txWhite" target="_blank">
+					<i class="fa fa-facebook fontSize1-5"></i>
+				</a>
+			</span>
+			<span class="footer_sc_icons leftright10">
+				<a href="https://twitter.com/picartotv/" class="noDecoration txWhite" target="_blank">
+					<i class="fa fa-twitter fontSize1-5"></i>
+				</a>
+			</span>
+			<span class="footer_sc_icons leftright10">
+				<a href="https://picartotv.tumblr.com" class="noDecoration txWhite" target="_blank">
+					<i class="fa fa-tumblr fontSize1-5"></i>
+				</a>
+			</span>
+			<span class="footer_sc_icons leftright10">
+				<a href="https://www.youtube.com/c/PicartoTVOfficial" class="noDecoration txWhite" target="_blank">
+					<i class="fa fa-youtube-play fontSize1-5"></i>
+				</a>
+			</span>
+			<span class="footer_sc_icons leftright10">
+				<a href="https://vk.com/picartotvofficial" class="noDecoration txWhite" target="_blank">
+					<i class="fa fa-vk fontSize1-5"></i>
+				</a>
+			</span>
+		</div>
+		<div id="footer_infos" class="bot5 text-center fontSize0-9">
+			&copy; Picarto.TV 2013 - 2017			<a class="leftright5" href="/site/about" data-i18n="footer.about_us">About Us</a>
+						<a class="leftright5" href="http://help.picarto.tv" data-i18n="footer.help">Help</a>
+			<a class="leftright5" href="/site/terms" data-i18n="footer.terms">Terms</a>
+			<a class="leftright5" href="/site/policy" data-i18n="footer.privacy">Privacy Policy</a>
+			<a class="leftright5" href="/site/press" data-i18n="footer.press">Press</a>
+            <a class="leftright5" href="/site/mascot" data-i18n="footer.mascot">Mascot</a>
+			<!--<a class="leftright5" class="hide" href="/site/api" data-i18n="footer.api">API</a>-->
+			<a class="leftright5" href="/site/upgrade" data-i18n="footer.upgrade">Upgrade</a>
+		</div>
+	</div>
+    </body>
+</html>
